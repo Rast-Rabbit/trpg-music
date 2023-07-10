@@ -1,0 +1,13 @@
+<!-- index.html -->
+<button onclick="joinVoiceChannel()">Join Voice Channel</button>
+
+<script>
+function joinVoiceChannel() {
+  fetch('http://localhost:6666/join')
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+</script>
